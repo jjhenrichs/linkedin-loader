@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.container {
+    height: 300px;
+    width: 400px;
+}
+
+.position {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.label {
+    margin: 85px auto;
+    text-align: center;
+    height: 20px;
+    width: 400px;
+}
+
+.label-content {
+    font-size: 60px;
+    color: #0a66c2;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+}
+
+.icon {
+    color: #0a66c2; 
+    font-size: 60px;
+}
+
+.loader {
+    margin: 0 auto;
+    width: 200px;
+    height: 2px;
+    background: #DDD;
+    z-index: 0;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.loader::before {
+    content: "";
+    width: 120px;
+    height: 2px;
+    background: #0a66c2;
+    position: absolute;
+    left: -30%;
+    z-index: -1;
+    animation: animate 2s linear 0s infinite;
+}
+
+@keyframes animate {
+    50% {
+        left: 70%
+    }
+
+    0%, 100% {
+        left: -30%;
+    }
+}
+
